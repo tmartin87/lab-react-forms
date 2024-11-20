@@ -8,6 +8,26 @@ import studentsData from "./assets/students.json";
 
 function App() {
   const [students, setStudents] = useState(studentsData);
+  const [fullName, setFullName] = useState("");
+  const [image, setImage] = useState("");
+  const [email, setEmail] = useState("");
+  const [program, setProgram] = useState("Web Dev")
+  const [graduationYear, setGraduationYear]=useState(0)
+  const [isGraduated,setIsgraduated] = useState(false)  
+
+  const handleStudentsInput = (e) => setStudents(e.target.value)
+  const handleFullnameInput = (e) => setFullName(e.target.value)
+  const handleImagetsInput = (e) => setImage(e.target.value)
+  const handleEmailsInput = (e) => setEmail(e.target.value)
+  const handleProgramInput = (e) => setProgram(e.target.value)
+  const handleGraduationYearInput = (e) => setTGraduationYear(e.target.value)
+  const handleIsGraduatedInput = (e) => setTIsGraduated(e.target.checked)
+
+  const handleSubmit = (e) => {
+    e.preventDefault ();
+  const newStudent = {fullName, image, email, program, graduationYear, isGraduated}}
+  
+  
 
 
   return (
